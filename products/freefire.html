@@ -68,9 +68,10 @@
         .header .container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
             position: relative;
+            gap: clamp(20px, 4vw, 30px);
         }
 
         .logo a {
@@ -496,16 +497,7 @@
 
         .social-links a {
             color: var(--text-color);
-            font-size:  viewers;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration17px;
+            font-size: 20px;
             transition: color 0.3s ease;
         }
 
@@ -831,7 +823,7 @@
             </nav>
 
             <!-- Mobile Toggle -->
-            <div class="mobile-toggle" id="mobileToggle">
+            <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -892,7 +884,7 @@
                                 <p class="original-price">NPR 258</p>
                                 <p>NPR 250 <span class="discount-badge">3% OFF!</span></p>
                             </div>
-                            <div class="option-card" data-id="ff-610" data-name="610 Diamonds" data-price "669">
+                            <div class="option-card" data-id="ff-610" data-name="610 Diamonds" data-price="669">
                                 <h4>💎 610 Diamonds</h4>
                                 <p class="original-price">NPR 690</p>
                                 <p>NPR 669 <span class="discount-badge">3% OFF!</span></p>
@@ -1047,7 +1039,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>ADITYA GAMING STORE</h3>
-                    <p>Your trusted source for in-game diamonds & tournaments.</p>
+                    <p>Aditya Gaming Store is your trusted source for digital top-ups and subscriptions for a wide variety of games. Whether you play battle royale, strategy, MOBA, or casual games, we provide fast and secure top-up services to help you enjoy your favorite games without limits. With easy payment options like Esewa, Khalti, and bank transfer, topping up has never been easier.</p>
                     <div class="social-links">
                         <a href="https://facebook.com/adyyera"><i class="fab fa-facebook"></i></a>
                         <a href="https://wa.me/9779829317406"><i class="fab fa-whatsapp"></i></a>
@@ -1059,8 +1051,10 @@
                     <ul>
                         <li><a href="products.html">Shop</a></li>
                         <li><a href="tournaments.html">Tournaments</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
