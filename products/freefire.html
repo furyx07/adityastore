@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Free Fire Top-Up - Aditya Gaming Store</title>
+    <link rel="stylesheet" href="css/stylefreefire.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Oxanium:wght@700&display=stylesheet" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 🚀 Top Bar -->
+    <div class="announcement-bar">
+        ⚡️ Instant Top-Ups | 24/7 Support | 🎮 Tournaments Open — Join & Win Now!
+      </div>
+      
+      <style>
+        .announcement-bar {
+          font-family: 'Brush Script MT', cursive, 'Comic Sans MS', sans-serif;
+          font-style: italic;
+          font-weight: 600;
+          color: #1e40af; /* blue-800 */
+          font-size: 0.9rem; /* smaller font */
+          text-align: center;
+          padding: 8px 15px;
+        }
+      </style>
+
+    <!-- 🎯 Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">ADITYA <span>GAMING STORE</span></a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/products.html">Shop</a></li>
+                    <li><a href="/tournaments.html">Tournaments</a></li>
+                    <li><a href="/about.html">About Us</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 💎 Free Fire Top-Up Section -->
+    <section class="topup-section">
+        <div class="container topup-container">
+            <!-- Sidebar -->
+            <div class="topup-sidebar">
+                <div class="sidebar-box">
+                    <img src="https://i.ibb.co/M5NCWvGy/freefire.jpg" alt="Free Fire Logo" class="game-logo">
+                    <div class="sidebar-text">
+                        <h2>Free Fire (Nepal)</h2>
+                        <p class="highlight">⚡ Instant • Nepal</p>
+                        <p class="non-refundable">All Purchases are <strong>NON-REFUNDABLE</strong> and <strong>NON-RETURNABLE</strong>.</p>
+                        <p class="description">Aditya Gaming Store is the ultimate destination for Free Fire players in Nepal, offering a fast, secure, and hassle-free diamond top-up service that lets you enhance your gaming experience instantly. Simply provide your Free Fire UID, select your preferred diamond package, and complete your payment through convenient options like Khalti, bank transfer, or eSewa – your diamonds will be delivered to your account immediately, allowing you to unlock skins, weapons, and battle passes without delay. Trusted by thousands of Nepali gamers, we provide reliable service with instant delivery, competitive pricing, and excellent customer support, ensuring you can focus on surviving and winning in Free Fire. Level up your Free Fire journey today with Aditya Gaming Store's seamless top-up solution!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="topup-content">
+                <!-- Step 1: Account Data -->
+                <div class="topup-step">
+                    <p style="color: red; font-size: 10px;">⚠️ Warning: Please double-check your UID before proceeding. We are not responsible for top-ups sent to the wrong account due to incorrect UID entry.</p>
+                    <h3>1. Enter Your Account Data</h3>
+                    <div class="account-data">
+                        <input type="text" id="user-id" name="free_fire_uid" placeholder="Free Fire UID" required>
+                    </div>
+                </div>
+
+                <!-- Step 2: Select Amount -->
+                <div class="topup-step">
+                    <h3>2. Select the Amount You Want to Buy</h3>
+                    <div class="topup-options">
+                        <h4>⚡️ TOPUP</h4>
+                        <!-- Diamonds Category -->
+                        <h5 class="category-title">Diamonds 💎</h5>
+                        <div class="options-grid diamonds-grid">
+                            <div class="option-card" data-id="ff-25" data-name="25 Diamonds" data-price="30">
+                                <h4>💎 25 Diamonds</h4>
+                                <p class="original-price">NPR 31</p>
+                                <p>NPR 30 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-50" data-name="50 Diamonds" data-price="70">
+                                <h4>💎 50 Diamonds</h4>
+                                <p class="original-price">NPR 72</p>
+                                <p>NPR 70 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-1110" data-name="1110 Diamonds" data-price="125">
+                                <h4>💎 1110 Diamonds</h4>
+                                <p class="original-price">NPR 129</p>
+                                <p>NPR 125 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-240" data-name="240 Diamonds" data-price="250">
+                                <h4>💎 240 Diamonds</h4>
+                                <p class="original-price">NPR 258</p>
+                                <p>NPR 250 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-610" data-name="610 Diamonds" data-price="669">
+                                <h4>💎 610 Diamonds</h4>
+                                <p class="original-price">NPR 690</p>
+                                <p>NPR 669 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-1240" data-name="1240 Diamonds" data-price="1150">
+                                <h4>💎 1240 Diamonds</h4>
+                                <p class="original-price">NPR 1186</p>
+                                <p>NPR 1150 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-2510" data-name="2510 Diamonds" data-price="2300">
+                                <h4>💎 2510 Diamonds</h4>
+                                <p class="original-price">NPR 2371</p>
+                                <p>NPR 2300 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                        </div>
+                        <!-- Memberships Category -->
+                        <h5 class="category-title">Memberships 🎫</h5>
+                        <div class="options-grid memberships-grid">
+                            <div class="option-card" data-id="ff-weekly-lite" data-name="Weekly Lite" data-price="70">
+                                <h4>Weekly Lite</h4>
+                                <p class="original-price">NPR 72</p>
+                                <p>NPR 70 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-weekly" data-name="Weekly Membership" data-price="250">
+                                <h4>Weekly Membership</h4>
+                                <p class="original-price">NPR 258</p>
+                                <p>NPR 250 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-monthly" data-name="Monthly Membership" data-price="1200">
+                                <h4>Monthly Membership</h4>
+                                <p class="original-price">NPR 1237</p>
+                                <p>NPR 1200 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                        </div>
+                        <!-- Others Category -->
+                        <h5 class="category-title">Others 🎮</h5>
+                        <div class="options-grid others-grid">
+                            <div class="option-card" data-id="ff-level-6" data-name="Level Pass (6 Levels)" data-price="50">
+                                <h4>Level Pass (6 Levels)</h4>
+                                <p class="original-price">NPR 52</p>
+                                <p>NPR 50 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-level-10" data-name="Level Pass (10 Levels)" data-price="83">
+                                <h4>Level Pass (10 Levels)</h4>
+                                <p class="original-price">NPR 86</p>
+                                <p>NPR 83 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-level-20" data-name="Level Pass (20 Levels)" data-price="110">
+                                <h4>Level Pass (20 Levels)</h4>
+                                <p class="original-price">NPR 113</p>
+                                <p>NPR 110 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-level-25" data-name="Level Pass (25 Levels)" data-price="115">
+                                <h4>Level Pass (25 Levels)</h4>
+                                <p class="original-price">NPR 119</p>
+                                <p>NPR 115 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-level-30" data-name="Level Pass (30 Levels)" data-price="130">
+                                <h4>Level Pass (30 Levels)</h4>
+                                <p class="original-price">NPR 134</p>
+                                <p>NPR 130 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-evo-3" data-name="Evo Access (3 Days)" data-price="100">
+                                <h4>Evo Access (3 Days)</h4>
+                                <p class="original-price">NPR 103</p>
+                                <p>NPR 100 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-evo-7" data-name="Evo Access (7 Days)" data-price="150">
+                                <h4>Evo Access (7 Days)</h4>
+                                <p class="original-price">NPR 155</p>
+                                <p>NPR 150 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                            <div class="option-card" data-id="ff-evo-30" data-name="Evo Access (30 Days)" data-price="400">
+                                <h4>Evo Access (30 Days)</h4>
+                                <p class="original-price">NPR 412</p>
+                                <p>NPR 400 <span class="discount-badge">3% OFF!</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Payment Options -->
+                <div class="topup-step payment-step" style="display: none;">
+                    <h3>3. Select the Payment You Want to Use</h3>
+                    <div class="payment-options">
+                        <div class="payment-card">
+                            <h4>E-Payment</h4>
+                            <select id="payment-method" name="payment-method" required>
+                                <option value="">Select a payment method</option>
+                                <option value="Bank">Bank</option>
+                                <option value="Khalti">Khalti</option>
+                                <option value="eSewa">eSewa</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buy Now Button -->
+                <div class="buy-now-container">
+                    <button class="btn btn-primary buy-now" id="buy-now" disabled>Buy Now!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📖 About Free Fire Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2><i class="fas fa-info"></i> About Free Fire</h2>
+            <h3 class="section-title">Free Fire – Fast and Secure Diamond Top-Up in Nepal</h3>
+            <p>Experience the adrenaline-pumping action of Free Fire, a globally celebrated battle royale game where survival and strategy are key. Team up with friends, customize your characters with exclusive skins, and fight to be the last one standing in intense, fast-paced matches. With dynamic gameplay and vibrant graphics, Free Fire delivers an unparalleled mobile gaming experience.</p>
+            <p>Diamonds are the premium currency in Free Fire, essential for unlocking skins, weapons, battle passes, and more. With Aditya Gaming Store, topping up diamonds is quick, secure, and tailored for Nepali players.</p>
+            <h4 class="section-title">Why Choose Our Free Fire Diamond Top-Up Service?</h4>
+            <ul style="font-size: 12px; color: #ccc; margin-bottom: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <li>Instant Delivery – Diamonds credited to your account immediately.</li>
+                <li>Affordable Pricing – Packages start at just NPR 30 for 25 Diamonds.</li>
+                <li>Secure Payments – Pay via Khalti, bank transfer, or eSewa.</li>
+                <li>Supports Memberships – Buy diamonds, Weekly, or Monthly Memberships.</li>
+            </ul>
+            <h4 class="section-title">How to Top Up Diamonds in Nepal</h4>
+            <p class="centered-text">Visit Aditya Gaming Store.com or open the Aditya Gaming Store App.</p>
+            <ol style="font-size: 12px; color: #ccc; margin-bottom: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <li>Enter your Free Fire UID (find it in-game under your profile).</li>
+                <li>Select your diamond package or membership.</li>
+                <li>Choose a payment method (Khalti, bank transfer, or eSewa).</li>
+                <li>Complete payment, and your diamonds will be delivered instantly!</li>
+            </ol>
+            <h4 class="section-title">How to Find Your Free Fire UID</h4>
+            <p class="centered-text">Open Free Fire and tap your profile icon (top-left corner).</p>
+            <p class="centered-text">Your UID (e.g., 123456789) is displayed under your in-game name.</p>
+        </div>
+    </section>
+
+    <!-- 📞 Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Need Help? Contact Us 24/7!</h2>
+            <form action="https://formspree.io/f/mvgqpppq" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- 🏁 Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>ADITYA GAMING STORE</h3>
+                    <p>Your trusted source for in-game diamonds & tournaments.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/adyyera"><i class="fab fa-facebook"></i></a>
+                        <a href="https://wa.me/9779829317406"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:adityagamingstoregg@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Shop</a></li>
+                        <li><a href="tournaments.html">Tournaments</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +9779829317406</p>
+                    <p><i class="fas fa-envelope"></i> adityagamingstoregg@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Aditya Gaming Store. All Rights Reserved.</p>
+                <p class="disclaimer">Disclaimer : Aditya Gaming Store is a sole proprietorship business dedicated to providing virtual game top-up services and tournament hosting. We are not affiliated with or endorsed by any game publishers or official platforms. All game-related assets, names, and trademarks belong to their respective owners.!</p>
+                <div class="payment-methods">
+                    <img src="https://i.ibb.co/0jmpX8cV/khaltilogo.png" alt="Khalti">
+                    <img src="https://i.ibb.co/3585dZjZ/pngegg.png" alt="eSewa">
+                    <img src="https://i.ibb.co/LX3KKCy4/bank-pay.png" alt="Bank">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <h3>Complete Your Purchase</h3>
+            <p>Selected Package: <span id="modal-package"></span></p>
+            <p>Price: <span id="modal-price"></span></p>
+            <p>Free Fire UID: <span id="modal-user-id"></span></p>
+            <p>Payment Method: <span id="modal-payment-method"></span></p>
+            <img id="modal-qr" src="" alt="Payment QR Code" class="modal-qr">
+            <p style="color: red; font-size: 10px;">⚠️ Warning: Please verify your Transaction ID carefully. We cannot reverse or refund any top-ups made with an incorrect Transaction ID.</p>
+            <form action="https://formspree.io/f/mvgqpppq" method="POST" id="order-form">
+                <input type="hidden" name="package" id="form-package">
+                <input type="hidden" name="price" id="form-price">
+                <input type="hidden" name="free_fire_uid" id="form-user-id">
+                <input type="hidden" name="payment_method" id="form-payment-method">
+                <input type="text" name="transaction_id" id="transaction-id" placeholder="Enter Transaction ID" required>
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary">Submit Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 📜 JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('payment-modal');
+            const modalClose = document.querySelector('.modal-close');
+            const modalPackage = document.getElementById('modal-package');
+            const modalPrice = document.getElementById('modal-price');
+            const modalUserId = document.getElementById('modal-user-id');
+            const modalPaymentMethod = document.getElementById('modal-payment-method');
+            const modalQr = document.getElementById('modal-qr');
+            const formPackage = document.getElementById('form-package');
+            const formPrice = document.getElementById('form-price');
+            const formUserId = document.getElementById('form-user-id');
+            const formPaymentMethod = document.getElementById('form-payment-method');
+            const paymentStep = document.querySelector('.payment-step');
+            const buyNowButton = document.getElementById('buy-now');
+            let selectedPackage = null;
+
+            // Handle package selection and scroll to payment
+            document.querySelectorAll('.option-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+                    card.classList.add('selected');
+                    selectedPackage = {
+                        id: card.dataset.id,
+                        name: card.dataset.name,
+                        price: card.dataset.price
+                    };
+                    paymentStep.style.display = 'block';
+                    paymentStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    checkBuyNowEnable();
+                });
+            });
+
+            // Handle payment method selection
+            const paymentMethodSelect = document.getElementById('payment-method');
+            paymentMethodSelect.addEventListener('change', () => {
+                checkBuyNowEnable();
+            });
+
+            // Function to enable/disable Buy Now button
+            function checkBuyNowEnable() {
+                const userId = document.getElementById('user-id').value.trim();
+                const paymentMethod = paymentMethodSelect.value;
+                buyNowButton.disabled = !(selectedPackage && paymentMethod && userId);
+            }
+
+            // Handle Buy Now button click
+            buyNowButton.addEventListener('click', () => {
+                const userId = document.getElementById('user-id').value.trim();
+                const paymentMethod = paymentMethodSelect.value;
+
+                if (!userId) {
+                    alert('Please enter your Free Fire UID.');
+                    return;
+                }
+
+                if (!selectedPackage) {
+                    alert('Please select a Diamond package.');
+                    return;
+                }
+
+                if (!paymentMethod) {
+                    alert('Please select a payment method.');
+                    return;
+                }
+
+                // Populate modal
+                modalPackage.textContent = selectedPackage.name;
+                modalPrice.textContent = `NPR ${selectedPackage.price}`;
+                modalUserId.textContent = userId;
+                modalPaymentMethod.textContent = paymentMethod;
+
+                // Set QR code based on payment method
+                const qrImages = {
+                    'Bank': 'https://i.ibb.co/pvQ57hGL/459960289-1745751829534498-4012334677077375666-n.jpg',
+                    'Khalti': 'https://i.ibb.co/R4sfJh2N/khalti.jpg',
+                    'eSewa': 'https://i.ibb.co/fVsZjKMW/esewa.jpg'
+                };
+                modalQr.src = qrImages[paymentMethod] || '';
+
+                // Populate form hidden fields
+                formPackage.value = selectedPackage.name;
+                formPrice.value = selectedPackage.price;
+                formUserId.value = userId;
+                formPaymentMethod.value = paymentMethod;
+
+                // Show modal with fade-in
+                modal.style.opacity = '0';
+                modal.style.display = 'flex';
+                setTimeout(() => {
+                    modal.style.opacity = '1';
+                    modal.style.transition = 'opacity 0.3s ease';
+                }, 10);
+            });
+
+            // Close modal
+            modalClose.addEventListener('click', () => {
+                modal.style.opacity = '0';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            });
+
+            // Close modal when clicking outside
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.opacity = '0';
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 300);
+                }
+            });
+
+            // Handle form submission
+            document.getElementById('order-form').addEventListener('submit', (e) => {
+                const transactionId = document.getElementById('transaction-id').value.trim();
+                if (!transactionId) {
+                    e.preventDefault();
+                    alert('Please enter a Transaction ID.');
+                    return;
+                }
+            });
+ 
+            document.getElementById('mobileToggle').addEventListener('click', function() {
+                const navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('active');
+                
+                // Change icon
+                const icon = this.querySelector('i');
+                if (navbar.classList.contains('active')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.navbar a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const navbar = document.querySelector('.navbar');
+                    if (navbar.classList.contains('active')) {
+                        navbar.classList.remove('active');
+                        document.querySelector('#mobileToggle i').classList.replace('fa-times', 'fa-bars');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
