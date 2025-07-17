@@ -23,12 +23,12 @@
             box-sizing: border-box;
         }
         :root {
-            --primary-color: #00d1ff; /* Neon cyan */
-            --secondary-color: #ff00e6; /* Neon magenta */
-            --dark-bg: #0d1117; /* Dark gray-blue */
-            --card-bg: #1c2526; /* Slightly lighter card background */
-            --text-color: #e6edf3; /* Light text */
-            --text-muted: #8b949e; /* Muted text */
+            --primary-color: #00d1ff;
+            --secondary-color: #ff00e6;
+            --dark-bg: #0d1117;
+            --card-bg: #1c2526;
+            --text-color: #e6edf3;
+            --text-muted: #8b949e;
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -69,8 +69,9 @@
         .header .container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            gap: clamp(15px, 2vw, 20px);
         }
         .logo a {
             font-family: 'Orbitron', sans-serif;
@@ -103,6 +104,8 @@
             color: var(--text-color);
             cursor: pointer;
             z-index: 1001;
+            background: none;
+            border: none;
         }
         /* 🎮 Tournament Section */
         .tournament-section {
@@ -324,6 +327,7 @@
             width: 95%;
             text-align: center;
             box-shadow: 0 6px 12px rgba(0, 209, 255, 0.3);
+            position: relative;
         }
         .modal-close {
             position: absolute;
@@ -332,6 +336,8 @@
             font-size: 20px;
             color: var(--text-color);
             cursor: pointer;
+            background: none;
+            border: none;
         }
         .modal-close:hover {
             color: var(--primary-color);
@@ -559,9 +565,9 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" role="button" aria-expanded="false">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" role="button" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </header>
     <!-- 🎮 Tournament Section -->
@@ -578,18 +584,18 @@
         <div class="container">
             <h2>Register for a Tournament</h2>
             <p style="color: var(--secondary-color); text-align: center; margin-bottom: 15px;">⚠️ Tournaments are currently unavailable. Please check back later!</p>
-            <p style="color: #ff4d4d; font-size: 12px; text-align: center; margin-bottom: 15px;">⚠️ Warning: Double-check your Free Fire UID and squad details. Incorrect entries cannot be corrected after submission.</p>
+            <p style="color: #ff4d4d; font-size: 12px; text-align: center; margin-bottom: 15px;" id="uid-warning">⚠️ Warning: Double-check your Free Fire UID and squad details. Incorrect entries cannot be corrected after submission.</p>
             <form action="https://formspree.io/f/mvgqpppq" method="POST" class="registration-form" id="registration-form" style="display: none;">
                 <input type="hidden" name="tournament" id="tournament-select">
                 <label for="player-id">Free Fire UID (Solo or Player 1)</label>
-                <input type="text" name="player-id" id="player-id" placeholder="Free Fire UID (Solo or Player 1)" required>
+                <input type="text" name="player-id" id="player-id" placeholder="Free Fire UID (Solo or Player 1)" required aria-describedby="uid-warning">
                 <div class="squad-fields" id="squad-fields">
                     <label for="squad-player-2">Player 2 UID</label>
-                    <input type="text" name="squad-player-2" id="squad-player-2" placeholder="Player 2 UID" class="squad-player">
+                    <input type="text" name="squad-player-2" id="squad-player-2" placeholder="Player 2 UID" class="squad-player" aria-describedby="uid-warning">
                     <label for="squad-player-3">Player 3 UID</label>
-                    <input type="text" name="squad-player-3" id="squad-player-3" placeholder="Player 3 UID" class="squad-player">
+                    <input type="text" name="squad-player-3" id="squad-player-3" placeholder="Player 3 UID" class="squad-player" aria-describedby="uid-warning">
                     <label for="squad-player-4">Player 4 UID</label>
-                    <input type="text" name="squad-player-4" id="squad-player-4" placeholder="Player 4 UID" class="squad-player">
+                    <input type="text" name="squad-player-4" id="squad-player-4" placeholder="Player 4 UID" class="squad-player" aria-describedby="uid-warning">
                     <label for="squad-substitute">Substitute UID (Optional)</label>
                     <input type="text" name="squad-substitute" id="squad-substitute" placeholder="Substitute UID (Optional)">
                 </div>
@@ -706,9 +712,9 @@
                 <p>© 2025 Aditya Gaming Store. All Rights Reserved.</p>
                 <p class="disclaimer">Disclaimer: Aditya Gaming Store is a sole proprietorship business dedicated to providing virtual game top-up services and tournament hosting. We are not affiliated with or endorsed by any game publishers or official platforms. All game-related assets, names, and trademarks belong to their respective owners.</p>
                 <div class="payment-methods">
-                    <img src="/assets/images/khalti.png" alt="Khalti">
-                    <img src="/assets/images/esewa.png" alt="eSewa">
-                    <img src="/assets/images/bank-pay.png" alt="Bank">
+                    <img src="https://i.ibb.co/0jmpX8cV/khaltilogo.png" alt="Khalti Payment">
+                    <img src="https://i.ibb.co/3585dZjZ/pngegg.png" alt="eSewa Payment">
+                    <img src="https://i.ibb.co/LX3KKCy4/bank-pay.png" alt="Bank Payment">
                 </div>
             </div>
         </div>
@@ -716,7 +722,7 @@
     <!-- Payment Modal -->
     <div class="modal" id="payment-modal">
         <div class="modal-content">
-            <span class="modal-close">×</span>
+            <button class="modal-close" aria-label="Close modal">×</button>
             <h3>Complete Your Tournament Registration</h3>
             <p>Tournament: <span id="modal-tournament"></span></p>
             <p>Entry Fee: <span id="modal-fee"></span></p>
@@ -769,6 +775,8 @@
                     const icon = mobileToggle.querySelector('i');
                     icon.classList.replace(isExpanded ? 'fa-bars' : 'fa-times', isExpanded ? 'fa-times' : 'fa-bars');
                     console.log(isExpanded ? 'Menu opened' : 'Menu closed');
+                    // Prevent scrolling when menu is open
+                    document.body.style.overflow = isExpanded ? 'hidden' : '';
                 };
 
                 mobileToggle.addEventListener('click', toggleMenu);
@@ -782,6 +790,7 @@
                             const icon = mobileToggle.querySelector('i');
                             icon.classList.replace('fa-times', 'fa-bars');
                             console.log('Link clicked, menu closed');
+                            document.body.style.overflow = '';
                         }
                     });
                 });
@@ -793,6 +802,7 @@
                         const icon = mobileToggle.querySelector('i');
                         icon.classList.replace('fa-times', 'fa-bars');
                         console.log('Outside click, menu closed');
+                        document.body.style.overflow = '';
                     }
                 });
 
@@ -828,7 +838,7 @@
                 let selectedTournament = null;
 
                 if (tournamentCards.length === 0) {
-                    console.warn('No tournament cards found. Tournament selection is disabled.');
+                    console.warn('No tournaments available. Please check back later for new tournaments.');
                 } else {
                     // Handle tournament card selection
                     tournamentCards.forEach(card => {
@@ -980,9 +990,9 @@
                 // Update QR code based on payment method
                 paymentMethodSelect.addEventListener('change', () => {
                     const qrImages = {
-                        'Khalti': '/assets/images/khalti.jpg',
-                        'eSewa': '/assets/images/esewa.jpg',
-                        'Bank': '/assets/images/bank.jpg'
+                        'Khalti': 'https://i.ibb.co/R4sfJh2N/khalti.jpg',
+                        'eSewa': 'https://i.ibb.co/fVsZjKMW/esewa.jpg',
+                        'Bank': 'https://i.ibb.co/pvQ57hGL/459960289-1745751829534498-4012334677077375666-n.jpg'
                     };
                     modalQr.src = qrImages[paymentMethodSelect.value] || '';
                     formPaymentMethod.value = paymentMethodSelect.value;
