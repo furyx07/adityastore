@@ -1,15 +1,3 @@
-Below is the improved version of your HTML, CSS, and JavaScript code for the "Aditya Gaming Store - Tournaments" page. I've addressed the issues mentioned in the previous response, including:
-Removed the duplicate <title> tag and standardized branding to "Aditya Gaming Store."
-Replaced the Tailwind CSS classes in the tournament section with custom CSS for consistency.
-Fixed the invalid email address in the footer.
-Added a check for tournament card availability in the JavaScript.
-Improved accessibility with ARIA attributes for the mobile toggle and added <label> elements for form inputs.
-Added basic UID validation for Free Fire (assuming 9-12 digits).
-Added a loading state for the "Join Now" button.
-Standardized metadata for SEO and branding consistency.
-Added a message to the registration section to reflect that tournaments are unavailable.
-Hosted QR code images locally (assumed placeholders; replace with actual paths).
-The code is fully functional, maintains the original design, and includes these improvements. You can copy and paste it directly.
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1036,45 +1024,3 @@ The code is fully functional, maintains the original design, and includes these 
     </script>
 </body>
 </html>
-Key Changes and Notes
-Title and Metadata:
-Removed the duplicate <title> and standardized to "Aditya Gaming Store - Tournaments."
-Updated meta tags for consistent branding and added an og:image placeholder (replace with an actual image URL).
-Tournament Section:
-Replaced Tailwind CSS with custom CSS using the existing --primary-color, --secondary-color, etc., for consistency.
-Kept the "Tournaments are not available" message but styled it using the custom CSS variables.
-Registration Section:
-Added a message indicating tournaments are unavailable and hid the form (style="display: none;") to prevent submissions until tournaments are enabled.
-Added <label> elements for all form inputs to improve accessibility.
-Footer:
-Corrected the email to amardhagaminghub@gmail.com.
-Updated payment method image sources to local paths (e.g., /assets/images/khalti.png). Replace these with actual paths to your images.
-JavaScript:
-Added a check for tournamentCards.length to prevent errors when no tournament cards are present.
-Added Free Fire UID validation (9-12 digits) for the player and squad inputs.
-Added a loading state for the "Join Now" button with a resetButton function.
-Updated the mobile menu toggle to include aria-expanded for accessibility.
-Wrapped all JavaScript in a try-catch block for better error handling.
-Updated QR code image sources to local paths (replace with actual paths).
-Accessibility:
-Added ARIA attributes to the mobile toggle (role="button", aria-expanded).
-Ensured form inputs have associated <label> elements.
-SEO:
-Standardized metadata to reflect "Aditya Gaming Store" branding.
-Ensured meta descriptions and keywords are relevant to the tournaments page.
-Instructions
-Copy and Paste: You can copy the entire code above and save it as tournaments.html or replace your existing file.
-Image Paths: Replace the placeholder image paths (/assets/images/khalti.png, /assets/images/esewa.png, /assets/images/bank.png, and /assets/images/og-image.jpg) with actual paths to your images.
-Formspree Endpoint: Verify that https://formspree.io/f/mvgqpppq is correctly configured for your form submissions.
-Enabling Tournaments: When tournaments are available, remove the style="display: none;" from the registration form and add tournament cards to the tournament section. Example card:
-<div class="tournament-grid">
-  <div class="tournament-card" data-type="solo" data-paid="true" data-fee="500">
-    <img src="/assets/images/freefire.png" alt="Free Fire">
-    <h4>Free Fire Solo</h4>
-    <p>Prize Pool: NPR 10,000</p>
-    <p class="schedule">Date: 2025-08-01</p>
-    <p class="spots-left">Spots Left: 50</p>
-  </div>
-</div>
-Testing: Test the page on different devices to ensure responsiveness and check form submissions with Formspree.
-If you need help with specific modifications (e.g., adding tournament cards, integrating a backend, or further optimizing), let me know!
