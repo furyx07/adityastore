@@ -190,30 +190,32 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Mobile menu toggle
-            document.getElementById('mobileToggle').addEventListener('click', function() {
-                const navbar = document.querySelector('.navbar');
-                navbar.classList.toggle('active');
+            document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    document.getElementById('mobileToggle').addEventListener('click', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('active');
 
-                // Change icon
-                const icon = this.querySelector('i');
-                if (navbar.classList.contains('active')) {
-                    icon.classList.replace('fa-bars', 'fa-times');
-                } else {
-                    icon.classList.replace('fa-times', 'fa-bars');
-                }
-            });
+        // Change icon
+        const icon = this.querySelector('i');
+        if (navbar.classList.contains('active')) {
+            icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+            icon.classList.replace('fa-times', 'fa-bars');
+        }
+    });
 
-            // Close mobile menu when clicking a link
-            document.querySelectorAll('.navbar a').forEach(link => {
-                link.addEventListener('click', () => {
-                    const navbar = document.querySelector('.navbar');
-                    if (navbar.classList.contains('active')) {
-                        navbar.classList.remove('active');
-                        document.querySelector('#mobileToggle i').classList.replace('fa-times', 'fa-bars');
-                    }
-                });
-            });
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', () => {
+            const navbar = document.querySelector('.navbar');
+            if (navbar.classList.contains('active')) {
+                navbar.classList.remove('active');
+                document.querySelector('#mobileToggle i').classList.replace('fa-times', 'fa-bars');
+            }
         });
+    });
+});
     </script>
 </body>
 </html>
