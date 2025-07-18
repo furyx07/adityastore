@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title> FreeFire Topup Nepal | Aditya Gaming Store</title>
+    <title>FreeFire Topup Nepal | Aditya Gaming Store</title>
     <!-- ✅ Logo (for Google/Browser Tab) -->
     <link rel="icon" href="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" type="image/jpg">
     <!-- ✅ SEO -->
@@ -74,16 +74,6 @@
         img {
             max-width: 100%;
             height: auto;
-        }
-
-        /* 🚀 Announcement Bar */
-        .announcement-bar {
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            text-align: center;
-            padding: 10px;
-            font-size: clamp(12px, 2vw, 15px);
-            font-weight: 600;
-            color: #000;
         }
 
         /* 🎯 Header */
@@ -751,10 +741,6 @@
             .btn {
                 width: 100%;
             }
-            .announcement-bar {
-                padding: 8px;
-                font-size: 12px;
-            }
             .footer-grid {
                 grid-template-columns: 1fr;
             }
@@ -781,11 +767,6 @@
     </style>
 </head>
 <body>
-    <!-- 🚀 Top Bar -->
-    <div class="announcement-bar">
-        ⚡️ Instant Top-Ups | 24/7 Support | 🎮 Tournaments Open — Join & Win Now!
-    </div>
-
     <!-- 🎯 Header -->
     <header class="header">
         <div class="container">
@@ -840,7 +821,7 @@
                 </div>
 
                 <!-- Step 2: Select Amount -->
-                <div class="topup-step">
+                <div class="topup-step topup-options" style="display: none;">
                     <h3>2. Select the Amount You Want to Buy</h3>
                     <div class="topup-options">
                         <h4>⚡️ TOPUP</h4>
@@ -971,7 +952,7 @@
                                 <h4>Level Pass (30 Levels)</h4>
                                 <p>NPR 130</p>
                             </div>
-                            <!-- Evo Section (Untouched) -->
+                            <!-- Evo Section -->
                             <div class="option-card" data-id="ff-evo-3" data-name="Evo Access (3 Days)" data-price="100">
                                 <h4>Evo Access (3 Days)</h4>
                                 <p>NPR 100</p>
@@ -1135,13 +1116,27 @@
             const formPrice = document.getElementById('form-price');
             const formUserId = document.getElementById('form-user-id');
             const formPaymentMethod = document.getElementById('form-payment-method');
+            const topupOptions = document.querySelector('.topup-options');
             const paymentStep = document.querySelector('.payment-step');
             const buyNowButton = document.getElementById('buy-now');
+            const userIdInput = document.getElementById('user-id');
+            const paymentMethodSelect = document.getElementById('payment-method');
             const mobileToggle = document.getElementById('mobileToggle');
             const navbar = document.querySelector('.navbar');
             let selectedPackage = null;
 
-            // Handle package selection and scroll to payment
+            // Validate UID and show diamond selection
+            userIdInput.addEventListener('input', () => {
+                const userId = userIdInput.value.trim();
+                const isValidUid = /^\d{8,}$/.test(userId); // Min 8 digits, numeric only
+                topupOptions.style.display = isValidUid ? 'block' : 'none';
+                paymentStep.style.display = 'none'; // Hide payment step if UID changes
+                selectedPackage = null; // Reset selected package
+                document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+                checkBuyNowEnable();
+            });
+
+            // Handle package selection and show payment options
             document.querySelectorAll('.option-card').forEach(card => {
                 card.addEventListener('click', () => {
                     document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
@@ -1158,25 +1153,26 @@
             });
 
             // Handle payment method selection
-            const paymentMethodSelect = document.getElementById('payment-method');
             paymentMethodSelect.addEventListener('change', () => {
                 checkBuyNowEnable();
             });
 
             // Function to enable/disable Buy Now button
             function checkBuyNowEnable() {
-                const userId = document.getElementById('user-id').value.trim();
+                const userId = userIdInput.value.trim();
+                const isValidUid = /^\d{8,}$/.test(userId);
                 const paymentMethod = paymentMethodSelect.value;
-                buyNowButton.disabled = !(selectedPackage && paymentMethod && userId);
+                buyNowButton.disabled = !(isValidUid && selectedPackage && paymentMethod);
             }
 
             // Handle Buy Now button click
             buyNowButton.addEventListener('click', () => {
-                const userId = document.getElementById('user-id').value.trim();
+                const userId = userIdInput.value.trim();
+                const isValidUid = /^\d{8,}$/.test(userId);
                 const paymentMethod = paymentMethodSelect.value;
 
-                if (!userId) {
-                    alert('Please enter your Free Fire UID.');
+                if (!isValidUid) {
+                    alert('Please enter a valid Free Fire UID (minimum 8 digits, numeric only).');
                     return;
                 }
 
