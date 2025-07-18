@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Nepal Game Topup & Diamond Recharge | Aditya Gaming Store</title>
-
-  <!-- ✅ Logo (only for Google/Browser Tab) -->
-  <link rel="icon" href="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" type="image/jpg" />
-
+  <!-- ✅ Logo (for Google/Browser Tab) -->
+  <link rel="icon" href="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" type="image/jpg">
   <!-- ✅ SEO -->
-  <meta name="description" content="Nepal's trusted game topup store. Buy diamonds, UC, elite passes, and subscriptions instantly. Secure payments with Khalti, Esewa & Bank Transfer." />
-  <meta name="keywords" content="Nepal topup, Free Fire diamond Nepal, PUBG UC Nepal, Game topup Nepal, Aditya Gaming Store" />
-  <meta name="author" content="Aditya Gaming Store" />
-  <meta name="robots" content="index, follow" />
-
+  <meta name="description" content="Nepal's trusted game topup store. Buy diamonds, UC, elite passes, and subscriptions instantly. Secure payments with Khalti, Esewa & Bank Transfer.">
+  <meta name="keywords" content="Nepal topup, Free Fire diamond Nepal, PUBG UC Nepal, Game topup Nepal, Aditya Gaming Store">
+  <meta name="author" content="Aditya Gaming Store">
+  <meta name="robots" content="index, follow">
   <!-- ✅ Open Graph for Social Preview -->
-  <meta property="og:title" content="Nepal Game Topup & Diamond Recharge | Aditya Gaming Store" />
-  <meta property="og:description" content="Instant topups for PUBG, Free Fire, MLBB & more. Pay securely via Khalti, Esewa, or Bank Transfer in Nepal." />
-  <meta property="og:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" />
-  <meta property="og:url" content="https://adityarajbanshi.com.np/" />
-  <meta property="og:type" content="website" />
-
+  <meta property="og:title" content="Nepal Game Topup & Diamond Recharge | Aditya Gaming Store">
+  <meta property="og:description" content="Instant topups for PUBG, Free Fire, MLBB & more. Pay securely via Khalti, Esewa, or Bank Transfer in Nepal.">
+  <meta property="og:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg">
+  <meta property="og:url" content="https://adityarajbanshi.com.np/">
+  <meta property="og:type" content="website">
   <!-- ✅ Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Nepal Game Topup | Aditya Gaming Store" />
-  <meta name="twitter:description" content="Buy topups & diamonds in Nepal. Instant delivery, 24/7 support." />
-  <meta name="twitter:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" />
-
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nepal Game Topup | Aditya Gaming Store">
+  <meta name="twitter:description" content="Buy topups & diamonds in Nepal. Instant delivery, 24/7 support.">
+  <meta name="twitter:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg">
   <!-- ✅ Google Structured Data (Logo for Search) -->
   <script type="application/ld+json">
   {
@@ -39,82 +33,433 @@
     "sameAs": [
       "https://facebook.com/adyyera",
       "https://wa.me/9779829317406",
-      "mailto:adityagamingstoregg@gmail.com"
+      "mailto:amardhagaminghub@gmail.com"
     ]
   }
   </script>
-
   <!-- Site verification -->
-  <meta name="google-site-verification" content="cLn8K_4Kp50JT5TDvRssE0R6mUYJApHiKM10L2WhRBk" />
-
+  <meta name="google-site-verification" content="cLn8K_4Kp50JT5TDvRssE0R6mUYJApHiKM10L2WhRBk">
   <!-- CSS & Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Oxanium:wght@700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Oxanium:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /* 🌟 Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary-color: #ff0066;
+      --secondary-color: #ffcc00;
+      --dark-bg: #0d1117;
+      --card-bg: #1c2526;
+      --text-color: #e6edf3;
+      --text-muted: #8b949e;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0d1117 0%, #1c2526 100%);
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* 🚀 Announcement Bar */
     .announcement-bar {
-      font-family: 'Brush Script MT', cursive, 'Comic Sans MS', sans-serif;
-      font-style: italic;
-      font-weight: 600;
-      color: #1e40af;
-      font-size: 0.9rem;
+      font-family: 'Oxanium', sans-serif;
+      font-weight: 700;
+      color: var(--text-color);
+      font-size: clamp(12px, 1.8vw, 14px);
       text-align: center;
       padding: 8px 15px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    }
+    /* 🎯 Header */
+    .header {
+      background: #161b22;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: clamp(15px, 2vw, 20px);
     }
     .logo a {
-      font-weight: bold;
+      font-family: 'Oxanium', sans-serif;
+      font-weight: 700;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: clamp(20px, 4vw, 24px);
     }
-    /* Only ADITYA white */
     .logo a .aditya-text {
       color: #fff;
     }
-    /* GAMING STORE blue */
     .logo a .gaming-store-text {
-      color: #ff007f;
+      color: var(--secondary-color);
     }
-
-    /* Center and space buttons in .shop-cta */
-    .shop-cta .container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    /* Navbar visible by default on desktop */
     .navbar {
       display: block;
     }
-
-    /* On mobile: hide navbar by default, show only if active */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: clamp(12px, 2vw, 20px);
+    }
+    .navbar a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      font-size: clamp(13px, 1.8vw, 14px);
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: var(--primary-color);
+    }
+    .mobile-toggle {
+      display: none;
+      font-size: 24px;
+      color: var(--text-color);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    /* 🎮 Hero */
+    .hero {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    .hero-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .hero-content {
+      text-align: center;
+      padding: 50px 0;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-family: 'Oxanium', sans-serif;
+      font-size: clamp(28px, 5vw, 36px);
+      color: var(--text-color);
+      margin-bottom: 15px;
+    }
+    .hero-content h1 span {
+      color: var(--primary-color);
+    }
+    .hero-content p {
+      font-size: clamp(14px, 2vw, 16px);
+      color: var(--text-muted);
+    }
+    /* 🎯 Shop CTA */
+    .shop-cta {
+      padding: 30px 0;
+      background: #161b22;
+      text-align: center;
+    }
+    .shop-cta .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .shop-cta h2 {
+      font-family: 'Oxanium', sans-serif;
+      font-size: clamp(20px, 3vw, 24px);
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .shop-cta p {
+      font-size: clamp(12px, 1.8vw, 14px);
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .shop-cta .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .shop-cta .btn-primary {
+      background: var(--primary-color);
+      color: #fff;
+    }
+    .shop-cta .btn-primary:hover {
+      background: #e6005c;
+      transform: scale(1.02);
+    }
+    .shop-cta .btn-secondary {
+      background: var(--secondary-color);
+      color: #000;
+    }
+    .shop-cta .btn-secondary:hover {
+      background: #e6b800;
+      transform: scale(1.02);
+    }
+    /* 📞 Contact CTA */
+    .contact-cta {
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      padding: 30px 0;
+      text-align: center;
+    }
+    .contact-cta h2 {
+      font-family: 'Oxanium', sans-serif;
+      font-size: clamp(20px, 3vw, 24px);
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #2c343b;
+      color: var(--text-color);
+      font-size: 14px;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border: 2px solid var(--primary-color);
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .button-container {
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn-primary {
+      background: var(--primary-color);
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #e6005c;
+      transform: scale(1.02);
+    }
+    /* 🏁 Footer */
+    .footer {
+      background: #161b22;
+      padding: 20px 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+      font-family: 'Oxanium', sans-serif;
+      font-size: clamp(16px, 3vw, 18px);
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .footer-about p,
+    .footer-contact p {
+      font-size: clamp(11px, 1.6vw, 12px);
+      color: var(--text-muted);
+      text-align: justify;
+    }
+    .footer-contact p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .social-links a {
+      color: var(--text-color);
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    .social-links a:hover {
+      color: var(--primary-color);
+    }
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: clamp(11px, 1.6vw, 12px);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+    .footer-bottom {
+      margin-top: 10px;
+      text-align: center;
+      border-top: 1px solid #2c343b;
+      padding-top: 10px;
+    }
+    .footer-bottom p {
+      font-size: clamp(11px, 1.5vw, 12px);
+      color: var(--text-muted);
+    }
+    .footer-bottom .disclaimer {
+      font-size: clamp(10px, 1.5vw, 11px);
+      color: #6b7280;
+    }
+    .payment-methods {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .payment-methods img {
+      height: 24px;
+      object-fit: contain;
+    }
+    /* 📱 Responsive Breakpoints */
     @media (max-width: 768px) {
       .navbar {
         display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #161b22;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        z-index: 999;
       }
       .navbar.active {
         display: block;
       }
+      .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar a {
+        display: block;
+        padding: 8px;
+        font-size: 15px;
+      }
+      .mobile-toggle {
+        display: block;
+        margin-left: auto;
+      }
+      .hero {
+        height: 300px;
+      }
+      .hero-content h1 {
+        font-size: clamp(22px, 4vw, 28px);
+      }
+      .hero-content p {
+        font-size: clamp(12px, 1.8vw, 14px);
+      }
+      .shop-cta .container {
+        gap: 15px;
+      }
+      .shop-cta .btn {
+        width: 100%;
+        padding: 8px;
+      }
+      .contact-form {
+        max-width: 90%;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 8px;
+        font-size: 13px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-about p,
+      .footer-contact p {
+        text-align: center;
+      }
+      .footer-contact p {
+        justify-content: center;
+      }
+      .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .social-links {
+        justify-content: center;
+      }
     }
-
-    /* Mobile toggle cursor pointer */
-    #mobileToggle {
-      cursor: pointer;
+    @media (max-width: 480px) {
+      .hero {
+        height: 250px;
+      }
+      .hero-content h1 {
+        font-size: clamp(18px, 3.5vw, 22px);
+      }
+      .hero-content p {
+        font-size: clamp(11px, 1.6vw, 12px);
+      }
+      .btn {
+        padding: 8px;
+        font-size: 13px;
+      }
     }
   </style>
-
-  <script src="scriptS/mainabout.js" defer></script>
 </head>
 <body>
-
   <!-- 🚀 Announcement -->
   <div class="announcement-bar">
     ⚡️ Instant Top-Ups | 24/7 Support | 🎮 Tournaments Open — Join & Win Now!
   </div>
-
   <!-- 🔝 Header -->
   <header class="header">
     <div class="container">
@@ -132,16 +477,15 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="mobile-toggle" id="mobileToggle">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
     </div>
   </header>
-
   <!-- 🎮 Hero -->
   <section class="hero">
     <video class="hero-video" autoplay loop muted playsinline>
-      <source src="assets/background.mp4" type="video/mp4" />
+      <source src="https://i.ibb.co/0nZ3X4V/background.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="container">
@@ -151,30 +495,30 @@
       </div>
     </div>
   </section>
-
   <!-- 🎯 CTA -->
   <section class="shop-cta">
     <div class="container">
       <h2 class="section-title">LEVEL UP YOUR GAME!</h2>
       <p>
-        Welcome to <span>Aditya Gaming Store</span> – Nepal's trusted hub for instant game top-ups and exciting tournaments!
-        Get <span>diamonds, UC, elite passes</span>, and exclusive items for PUBG, Free Fire, MLBB, and more.
-        Use <span>Khalti</span>, <span>Esewa</span>, or <span>Bank Transfer</span> for secure payments.
-        Join our <span>online tournaments</span>, compete with top players, and win great rewards.
-        <span>Don't wait</span> – power up your game and unlock your full potential today!
+        Welcome to Aditya Gaming Store – Nepal's trusted hub for instant game top-ups and exciting tournaments!
+        Get diamonds, UC, elite passes, and exclusive items for PUBG, Free Fire, MLBB, and more.
+        Use Khalti, Esewa, or Bank Transfer for secure payments.
+        Join our online tournaments, compete with top players, and win great rewards.
+        Don't wait – power up your game and unlock your full potential today!
       </p>
-      <a href="products.html" class="btn btn-primary">Shop Now</a>
-      <a href="tournaments.html" class="btn btn-secondary">Join Tournament</a>
+      <div class="button-container">
+        <a href="products.html" class="btn btn-primary">Shop Now</a>
+        <a href="tournaments.html" class="btn btn-secondary">Join Tournament</a>
+      </div>
     </div>
   </section>
-
   <!-- 📞 Contact -->
   <section class="contact-cta">
     <div class="container">
       <h2>Contact Us 24/7!</h2>
       <form action="https://formspree.io/f/mvgqpppq" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" required></textarea>
         <div class="button-container">
           <button type="submit" class="btn btn-primary">Send Message</button>
@@ -182,7 +526,6 @@
       </form>
     </div>
   </section>
-
   <!-- ⚙️ Footer -->
   <footer class="footer">
     <div class="container">
@@ -193,9 +536,9 @@
             Trusted source for digital game top-ups and subscriptions. Get fast top-ups for PUBG, Free Fire, MLBB and more using Esewa, Khalti, or bank.
           </p>
           <div class="social-links">
-            <a href="https://facebook.com/adyyera"><i class="fab fa-facebook"></i></a>
-            <a href="https://wa.me/9779829317406"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:adityagamingstoregg@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://facebook.com/adyyera" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://wa.me/9779829317406" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+            <a href="mailto:adityagamingstoregg@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
           </div>
         </div>
         <div class="footer-links">
@@ -211,46 +554,66 @@
         </div>
         <div class="footer-contact">
           <h3>Contact Us</h3>
-          <p><i class="fas fa-phone"></i> +9779829317406</p>
-          <p><i class="fas fa-envelope"></i> adityagamingstoregg@gmail.com</p>
+          <p><span><i class="fas fa-phone" aria-hidden="true"></i> +9779829317406</span></p>
+          <p><span><i class="fas fa-envelope" aria-hidden="true"></i> adityagamingstoregg@gmail.com@gmail.com</span></p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Aditya Gaming Store. All Rights Reserved.</p>
+        <p>© 2023 Aditya Gaming Store. All Rights Reserved.</p>
         <p class="disclaimer">
           Disclaimer: Aditya Gaming Store is a sole proprietorship providing game top-up services and tournament hosting. Not affiliated with official game publishers.
         </p>
         <div class="payment-methods">
-          <img src="https://i.ibb.co/0jmpX8cV/khaltilogo.png" alt="Khalti" />
-          <img src="https://i.ibb.co/3585dZjZ/pngegg.png" alt="eSewa" />
-          <img src="https://i.ibb.co/LX3KKCy4/bank-pay.png" alt="Bank" />
+          <img src="https://i.ibb.co/0jmpX8cV/khaltilogo.png" alt="Khalti Payment">
+          <img src="https://i.ibb.co/3585dZjZ/pngegg.png" alt="eSewa Payment">
+          <img src="https://i.ibb.co/LX3KKCy4/bank-pay.png" alt="Bank Payment">
         </div>
       </div>
     </div>
   </footer>
-
   <!-- 📜 Scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('mobileToggle');
-      const navbar = document.querySelector('.navbar');
-      toggle.addEventListener('click', () => {
-        navbar.classList.toggle('active');
-        const icon = toggle.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-      });
-
-      document.querySelectorAll('.navbar a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (navbar.classList.contains('active')) {
+      try {
+        const toggle = document.getElementById('mobileToggle');
+        const navbar = document.querySelector('.navbar');
+        if (!toggle || !navbar) {
+          console.error('Mobile toggle or navbar not found in the DOM');
+          return;
+        }
+        const toggleMenu = (event) => {
+          event.preventDefault();
+          navbar.classList.toggle('active');
+          const isExpanded = navbar.classList.contains('active');
+          toggle.setAttribute('aria-expanded', isExpanded);
+          const icon = toggle.querySelector('i');
+          icon.classList.replace(isExpanded ? 'fa-bars' : 'fa-times', isExpanded ? 'fa-times' : 'fa-bars');
+          document.body.style.overflow = isExpanded ? 'hidden' : '';
+        };
+        toggle.addEventListener('click', toggleMenu);
+        toggle.addEventListener('touchstart', toggleMenu);
+        document.querySelectorAll('.navbar a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (navbar.classList.contains('active')) {
+              navbar.classList.remove('active');
+              toggle.setAttribute('aria-expanded', 'false');
+              toggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+              document.body.style.overflow = '';
+            }
+          });
+        });
+        document.addEventListener('click', (event) => {
+          if (!navbar.contains(event.target) && !toggle.contains(event.target) && navbar.classList.contains('active')) {
             navbar.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
             toggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            document.body.style.overflow = '';
           }
         });
-      });
+      } catch (error) {
+        console.error('Error in menu toggle:', error);
+      }
     });
   </script>
-
 </body>
 </html>
