@@ -80,21 +80,27 @@
     /* Center and space buttons in .shop-cta */
     .shop-cta .container {
       display: flex;
-      justify-content: center; /* center horizontally */
-      gap: 20px; /* space between buttons */
-      flex-wrap: wrap; /* wrap on small screens */
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
-    /* Navbar default hidden on mobile */
+    /* Navbar visible by default on desktop */
     .navbar {
-      display: none;
-    }
-    /* Show navbar when active */
-    .navbar.active {
       display: block;
     }
 
-    /* Make mobile toggle cursor pointer */
+    /* On mobile: hide navbar by default, show only if active */
+    @media (max-width: 768px) {
+      .navbar {
+        display: none;
+      }
+      .navbar.active {
+        display: block;
+      }
+    }
+
+    /* Mobile toggle cursor pointer */
     #mobileToggle {
       cursor: pointer;
     }
