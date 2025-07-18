@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Free Fire Top-Up - Aditya Gaming Store</title>
+    <title> FreeFire Topup Nepal | Aditya Gaming Store</title>
+    <!-- ✅ Logo (for Google/Browser Tab) -->
+    <link rel="icon" href="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" type="image/jpg">
+    <!-- ✅ SEO -->
+    <meta name="description" content="Nepal's trusted game topup store. Buy diamonds, UC, elite passes, and subscriptions instantly. Secure payments with Khalti, Esewa & Bank Transfer.">
+    <meta name="keywords" content="Nepal topup, Free Fire diamond Nepal, PUBG UC Nepal, Game topup Nepal, Aditya Gaming Store">
+    <meta name="author" content="Aditya Gaming Store">
+    <meta name="robots" content="index, follow">
+    <!-- ✅ Open Graph for Social Preview -->
+    <meta property="og:title" content="Nepal Game Topup & Diamond Recharge | Aditya Gaming Store">
+    <meta property="og:description" content="Instant topups for PUBG, Free Fire, MLBB & more. Pay securely via Khalti, Esewa, or Bank Transfer in Nepal.">
+    <meta property="og:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg">
+    <meta property="og:url" content="https://adityarajbanshi.com.np/">
+    <meta property="og:type" content="website">
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nepal Game Topup | Aditya Gaming Store">
+    <meta name="twitter:description" content="Buy topups & diamonds in Nepal. Instant delivery, 24/7 support.">
+    <meta name="twitter:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg">
+    <!-- ✅ Google Structured Data (Logo for Search) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aditya Gaming Store",
+      "url": "https://adityarajbanshi.com.np",
+      "logo": "https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg",
+      "sameAs": [
+        "https://facebook.com/adyyera",
+        "https://wa.me/9779829317406",
+        "mailto:adityagamingstoregg@gmail.com"
+      ]
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Oxanium:wght@700&display=stylesheet" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -46,13 +79,11 @@
         /* 🚀 Announcement Bar */
         .announcement-bar {
             background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            font-family: 'Brush Script MT', cursive, 'Comic Sans MS', sans-serif;
-            font-style: italic;
-            font-weight: 600;
-            color: #1e40af;
-            font-size: clamp(12px, 2vw, 15px);
             text-align: center;
-            padding: 8px 15px;
+            padding: 10px;
+            font-size: clamp(12px, 2vw, 15px);
+            font-weight: 600;
+            color: #000;
         }
 
         /* 🎯 Header */
@@ -68,10 +99,9 @@
         .header .container {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: space-between;
             flex-wrap: wrap;
             position: relative;
-            gap: clamp(20px, 4vw, 30px);
         }
 
         .logo a {
@@ -85,30 +115,23 @@
             color: var(--primary-color);
         }
 
-       .navbar {
-    display: flex;
-    justify-content: flex-end; /* Aligns navbar to the right */
-    width: 100%;
-}
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: clamp(15px, 2vw, 25px);
+        }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: clamp(15px, 2vw, 25px);
-}
+        .navbar a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(13px, 2vw, 15px);
+            transition: color 0.3s ease;
+        }
 
-.navbar a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: clamp(13px, 2vw, 15px);
-    transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-    color: var(--primary-color);
-}
-
+        .navbar a:hover {
+            color: var(--primary-color);
+        }
 
         .mobile-toggle {
             display: none;
@@ -282,21 +305,6 @@
             font-size: clamp(13px, 2vw, 14px);
             color: var(--primary-color);
             font-weight: 600;
-        }
-
-        .option-card .original-price {
-            font-size: clamp(11px, 1.5vw, 12px);
-            color: var(--text-muted);
-            text-decoration: line-through;
-        }
-
-        .option-card .discount-badge {
-            font-size: 10px;
-            color: #000;
-            background: var(--secondary-color);
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 5px;
         }
 
         .buy-now-container {
@@ -676,16 +684,6 @@
             .options-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .hero {
-                padding: 50px 0;
-            }
-            .games-grid,
-            .tournament-cards {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
 
         @media (max-width: 768px) {
@@ -693,9 +691,6 @@
                 flex-direction: column;
             }
             .options-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .header .container {
@@ -717,14 +712,12 @@
             .mobile-toggle {
                 display: block;
             }
-            .sidebar-box:first-child {
-                flex-direction: column;
-                text-align: center;
+            .topup-sidebar {
+                padding: 8px;
             }
             .game-logo {
                 width: 60px;
                 height: 60px;
-                margin-bottom: 10px;
             }
             .sidebar-text h2 {
                 font-size: clamp(12px, 2vw, 14px);
@@ -738,45 +731,22 @@
             .sidebar-text .description {
                 font-size: clamp(8px, 1.5vw, 9px);
             }
-            .hero {
-                padding: 40px 0;
-            }
-            .games-grid,
-            .tournament-cards {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .hero-content h1 {
-                font-size: clamp(24px, 4vw, 32px);
-            }
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
         }
 
         @media (max-width: 480px) {
             .options-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+                gap: 8px; /* Reduced gap for mobile */
             }
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
+            .option-card {
+                padding: 8px; /* Smaller padding for compact look */
+                font-size: 12px;
             }
-            .service-card {
-                padding: 10px;
+            .option-card h4 {
+                font-size: clamp(10px, 2vw, 11px); /* Smaller title */
             }
-            .service-card img {
-                height: 100px;
-            }
-            .service-card h3 {
-                font-size: clamp(14px, 3vw, 15px);
-            }
-            .service-card p {
-                font-size: clamp(10px, 2vw, 11px);
+            .option-card p {
+                font-size: clamp(11px, 2vw, 12px); /* Smaller price */
             }
             .btn {
                 width: 100%;
@@ -791,15 +761,21 @@
             .modal-content {
                 padding: 15px;
             }
-            .hero {
-                padding: 30px 0;
+        }
+
+        @media (max-width: 360px) {
+            .options-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 products for very small screens */
+                gap: 6px;
             }
-            .games-grid,
-            .tournament-cards {
-                grid-template-columns: 1fr;
+            .option-card {
+                padding: 6px;
             }
-            .hero-content h1 {
-                font-size: clamp(20px, 3vw, 28px);
+            .option-card h4 {
+                font-size: clamp(9px, 1.8vw, 10px);
+            }
+            .option-card p {
+                font-size: clamp(10px, 1.8vw, 11px);
             }
         }
     </style>
@@ -871,40 +847,85 @@
                         <!-- Diamonds Category -->
                         <h5 class="category-title">Diamonds 💎</h5>
                         <div class="options-grid diamonds-grid">
-                            <div class="option-card" data-id="ff-25" data-name="25 Diamonds" data-price="30">
-                                <h4>💎 25 Diamonds</h4>
-                                <p class="original-price">NPR 31</p>
-                                <p>NPR 30 <span class="discount-badge">3% OFF!</span></p>
+                            <div class="option-card" data-id="ff-27" data-name="27 Diamonds" data-price="32">
+                                <h4>💎 27 Diamonds</h4>
+                                <p>NPR 32</p>
                             </div>
-                            <div class="option-card" data-id="ff-50" data-name="50 Diamonds" data-price="70">
+                            <div class="option-card" data-id="ff-50" data-name="50 Diamonds" data-price="60">
                                 <h4>💎 50 Diamonds</h4>
-                                <p class="original-price">NPR 72</p>
-                                <p>NPR 70 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 60</p>
                             </div>
-                            <div class="option-card" data-id="ff-1110" data-name="1110 Diamonds" data-price="125">
-                                <h4>💎 1110 Diamonds</h4>
-                                <p class="original-price">NPR 129</p>
-                                <p>NPR 125 <span class="discount-badge">3% OFF!</span></p>
+                            <div class="option-card" data-id="ff-110" data-name="110 Diamonds" data-price="95">
+                                <h4>💎 110 Diamonds</h4>
+                                <p>NPR 95</p>
                             </div>
-                            <div class="option-card" data-id="ff-240" data-name="240 Diamonds" data-price="250">
+                            <div class="option-card" data-id="ff-115" data-name="115 Diamonds" data-price="105">
+                                <h4>💎 115 Diamonds</h4>
+                                <p>NPR 105</p>
+                            </div>
+                            <div class="option-card" data-id="ff-240" data-name="240 Diamonds" data-price="195">
                                 <h4>💎 240 Diamonds</h4>
-                                <p class="original-price">NPR 258</p>
-                                <p>NPR 250 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 195</p>
                             </div>
-                            <div class="option-card" data-id="ff-610" data-name="610 Diamonds" data-price="669">
+                            <div class="option-card" data-id="ff-355" data-name="355 Diamonds" data-price="285">
+                                <h4>💎 355 Diamonds</h4>
+                                <p>NPR 285</p>
+                            </div>
+                            <div class="option-card" data-id="ff-480" data-name="480 Diamonds" data-price="375">
+                                <h4>💎 480 Diamonds</h4>
+                                <p>NPR 375</p>
+                            </div>
+                            <div class="option-card" data-id="ff-610" data-name="610 Diamonds" data-price="465">
                                 <h4>💎 610 Diamonds</h4>
-                                <p class="original-price">NPR 690</p>
-                                <p>NPR 669 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 465</p>
                             </div>
-                            <div class="option-card" data-id="ff-1240" data-name="1240 Diamonds" data-price="1150">
+                            <div class="option-card" data-id="ff-725" data-name="725 Diamonds" data-price="560">
+                                <h4>💎 725 Diamonds</h4>
+                                <p>NPR 560</p>
+                            </div>
+                            <div class="option-card" data-id="ff-850" data-name="850 Diamonds" data-price="650">
+                                <h4>💎 850 Diamonds</h4>
+                                <p>NPR 650</p>
+                            </div>
+                            <div class="option-card" data-id="ff-965" data-name="965 Diamonds" data-price="740">
+                                <h4>💎 965 Diamonds</h4>
+                                <p>NPR 740</p>
+                            </div>
+                            <div class="option-card" data-id="ff-1090" data-name="1090 Diamonds" data-price="830">
+                                <h4>💎 1090 Diamonds</h4>
+                                <p>NPR 830</p>
+                            </div>
+                            <div class="option-card" data-id="ff-1240" data-name="1240 Diamonds" data-price="920">
                                 <h4>💎 1240 Diamonds</h4>
-                                <p class="original-price">NPR 1186</p>
-                                <p>NPR 1150 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 920</p>
                             </div>
-                            <div class="option-card" data-id="ff-2510" data-name="2510 Diamonds" data-price="2300">
-                                <h4>💎 2510 Diamonds</h4>
-                                <p class="original-price">NPR 2371</p>
-                                <p>NPR 2300 <span class="discount-badge">3% OFF!</span></p>
+                            <div class="option-card" data-id="ff-1480" data-name="1480 Diamonds" data-price="1100">
+                                <h4>💎 1480 Diamonds</h4>
+                                <p>NPR 1100</p>
+                            </div>
+                            <div class="option-card" data-id="ff-1595" data-name="1595 Diamonds" data-price="1190">
+                                <h4>💎 1595 Diamonds</h4>
+                                <p>NPR 1190</p>
+                            </div>
+                            <div class="option-card" data-id="ff-1720" data-name="1720 Diamonds" data-price="1280">
+                                <h4>💎 1720 Diamonds</h4>
+                                <p>NPR 1280</p>
+                            </div>
+                            <div class="option-card" data-id="ff-1960" data-name="1960 Diamonds" data-price="1460">
+                                <h4>💎 1960 Diamonds</h4>
+                                <p>NPR 1460</p>
+                            </div>
+                            <div class="option-card" data-id="ff-2090" data-name="2090 Diamonds" data-price="1550">
+                                <h4>💎 2090 Diamonds</h4>
+                                <p>NPR 1550</p>
+                            </div>
+                            <div class="option-card" data-id="ff-2530" data-name="2530 Diamonds" data-price="1820">
+                                <h4>💎 2530 Diamonds</h4>
+                                <p>NPR 1820</p>
+                            </div>
+                            <div class="option-card" data-id="ff-5060" data-name="5060 Diamonds" data-price="3620">
+                                <h4>💎 5060 Diamonds</h4>
+                                <p>NPR 3620</p>
                             </div>
                         </div>
                         <!-- Memberships Category -->
@@ -912,62 +933,56 @@
                         <div class="options-grid memberships-grid">
                             <div class="option-card" data-id="ff-weekly-lite" data-name="Weekly Lite" data-price="70">
                                 <h4>Weekly Lite</h4>
-                                <p class="original-price">NPR 72</p>
-                                <p>NPR 70 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 70</p>
                             </div>
-                            <div class="option-card" data-id="ff-weekly" data-name="Weekly Membership" data-price="250">
+                            <div class="option-card" data-id="ff-weekly" data-name="Weekly Membership" data-price="195">
                                 <h4>Weekly Membership</h4>
-                                <p class="original-price">NPR 258</p>
-                                <p>NPR 250 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 195</p>
                             </div>
-                            <div class="option-card" data-id="ff-monthly" data-name="Monthly Membership" data-price="1200">
+                            <div class="option-card" data-id="ff-monthly" data-name="Monthly Membership" data-price="920">
                                 <h4>Monthly Membership</h4>
-                                <p class="original-price">NPR 1237</p>
-                                <p>NPR 1200 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 920</p>
                             </div>
                         </div>
                         <!-- Others Category -->
                         <h5 class="category-title">Others 🎮</h5>
                         <div class="options-grid others-grid">
+                            <div class="option-card" data-id="ff-level-up" data-name="Level Up Pass" data-price="195">
+                                <h4>Level Up Pass</h4>
+                                <p>NPR 195</p>
+                            </div>
                             <div class="option-card" data-id="ff-level-6" data-name="Level Pass (6 Levels)" data-price="50">
                                 <h4>Level Pass (6 Levels)</h4>
-                                <p class="original-price">NPR 52</p>
-                                <p>NPR 50 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 50</p>
                             </div>
                             <div class="option-card" data-id="ff-level-10" data-name="Level Pass (10 Levels)" data-price="83">
                                 <h4>Level Pass (10 Levels)</h4>
-                                <p class="original-price">NPR 86</p>
-                                <p>NPR 83 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 83</p>
                             </div>
                             <div class="option-card" data-id="ff-level-20" data-name="Level Pass (20 Levels)" data-price="110">
                                 <h4>Level Pass (20 Levels)</h4>
-                                <p class="original-price">NPR 113</p>
-                                <p>NPR 110 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 110</p>
                             </div>
                             <div class="option-card" data-id="ff-level-25" data-name="Level Pass (25 Levels)" data-price="115">
                                 <h4>Level Pass (25 Levels)</h4>
-                                <p class="original-price">NPR 119</p>
-                                <p>NPR 115 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 115</p>
                             </div>
                             <div class="option-card" data-id="ff-level-30" data-name="Level Pass (30 Levels)" data-price="130">
                                 <h4>Level Pass (30 Levels)</h4>
-                                <p class="original-price">NPR 134</p>
-                                <p>NPR 130 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 130</p>
                             </div>
+                            <!-- Evo Section (Untouched) -->
                             <div class="option-card" data-id="ff-evo-3" data-name="Evo Access (3 Days)" data-price="100">
                                 <h4>Evo Access (3 Days)</h4>
-                                <p class="original-price">NPR 103</p>
-                                <p>NPR 100 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 100</p>
                             </div>
                             <div class="option-card" data-id="ff-evo-7" data-name="Evo Access (7 Days)" data-price="150">
                                 <h4>Evo Access (7 Days)</h4>
-                                <p class="original-price">NPR 155</p>
-                                <p>NPR 150 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 150</p>
                             </div>
                             <div class="option-card" data-id="ff-evo-30" data-name="Evo Access (30 Days)" data-price="400">
                                 <h4>Evo Access (30 Days)</h4>
-                                <p class="original-price">NPR 412</p>
-                                <p>NPR 400 <span class="discount-badge">3% OFF!</span></p>
+                                <p>NPR 400</p>
                             </div>
                         </div>
                     </div>
@@ -1007,7 +1022,7 @@
             <h4 class="section-title">Why Choose Our Free Fire Diamond Top-Up Service?</h4>
             <ul style="font-size: 12px; color: #ccc; margin-bottom: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
                 <li>Instant Delivery – Diamonds credited to your account immediately.</li>
-                <li>Affordable Pricing – Packages start at just NPR 30 for 25 Diamonds.</li>
+                <li>Affordable Pricing – Packages start at just NPR 32 for 27 Diamonds.</li>
                 <li>Secure Payments – Pay via Khalti, bank transfer, or eSewa.</li>
                 <li>Supports Memberships – Buy diamonds, Weekly, or Monthly Memberships.</li>
             </ul>
