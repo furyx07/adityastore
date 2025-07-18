@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>FreeFire Topup Nepal | Aditya Gaming Store</title>
+    <title> FreeFire Nepal Topup | Aditya Gaming Store</title>
     <!-- ✅ Logo (for Google/Browser Tab) -->
     <link rel="icon" href="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" type="image/jpg">
     <!-- ✅ SEO -->
@@ -821,7 +821,7 @@
                 </div>
 
                 <!-- Step 2: Select Amount -->
-                <div class="topup-step topup-options" style="display: none;">
+                <div class="topup-step topup-options">
                     <h3>2. Select the Amount You Want to Buy</h3>
                     <div class="topup-options">
                         <h4>⚡️ TOPUP</h4>
@@ -970,7 +970,7 @@
                 </div>
 
                 <!-- Step 3: Payment Options -->
-                <div class="topup-step payment-step" style="display: none;">
+                <div class="topup-step payment-step">
                     <h3>3. Select the Payment You Want to Use</h3>
                     <div class="payment-options">
                         <div class="payment-card">
@@ -1116,29 +1116,26 @@
             const formPrice = document.getElementById('form-price');
             const formUserId = document.getElementById('form-user-id');
             const formPaymentMethod = document.getElementById('form-payment-method');
-            const topupOptions = document.querySelector('.topup-options');
-            const paymentStep = document.querySelector('.payment-step');
-            const buyNowButton = document.getElementById('buy-now');
             const userIdInput = document.getElementById('user-id');
             const paymentMethodSelect = document.getElementById('payment-method');
+            const buyNowButton = document.getElementById('buy-now');
             const mobileToggle = document.getElementById('mobileToggle');
             const navbar = document.querySelector('.navbar');
             let selectedPackage = null;
 
-            // Validate UID and show diamond selection
-            userIdInput.addEventListener('input', () => {
+            // Function to validate UID
+            function isValidUid() {
                 const userId = userIdInput.value.trim();
-                const isValidUid = /^\d{8,}$/.test(userId); // Min 8 digits, numeric only
-                topupOptions.style.display = isValidUid ? 'block' : 'none';
-                paymentStep.style.display = 'none'; // Hide payment step if UID changes
-                selectedPackage = null; // Reset selected package
-                document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
-                checkBuyNowEnable();
-            });
+                return /^\d{8,}$/.test(userId); // Min 8 digits, numeric only
+            }
 
-            // Handle package selection and show payment options
+            // Handle package selection
             document.querySelectorAll('.option-card').forEach(card => {
                 card.addEventListener('click', () => {
+                    if (!isValidUid()) {
+                        alert('Please enter the UID first.');
+                        return;
+                    }
                     document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
                     card.classList.add('selected');
                     selectedPackage = {
@@ -1146,32 +1143,37 @@
                         name: card.dataset.name,
                         price: card.dataset.price
                     };
-                    paymentStep.style.display = 'block';
-                    paymentStep.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     checkBuyNowEnable();
                 });
             });
 
             // Handle payment method selection
             paymentMethodSelect.addEventListener('change', () => {
+                if (!isValidUid()) {
+                    alert('Please enter the UID first.');
+                    paymentMethodSelect.value = ''; // Reset selection
+                    return;
+                }
+                checkBuyNowEnable();
+            });
+
+            // Update Buy Now button state
+            userIdInput.addEventListener('input', () => {
                 checkBuyNowEnable();
             });
 
             // Function to enable/disable Buy Now button
             function checkBuyNowEnable() {
-                const userId = userIdInput.value.trim();
-                const isValidUid = /^\d{8,}$/.test(userId);
                 const paymentMethod = paymentMethodSelect.value;
-                buyNowButton.disabled = !(isValidUid && selectedPackage && paymentMethod);
+                buyNowButton.disabled = !(isValidUid() && selectedPackage && paymentMethod);
             }
 
             // Handle Buy Now button click
             buyNowButton.addEventListener('click', () => {
                 const userId = userIdInput.value.trim();
-                const isValidUid = /^\d{8,}$/.test(userId);
                 const paymentMethod = paymentMethodSelect.value;
 
-                if (!isValidUid) {
+                if (!isValidUid()) {
                     alert('Please enter a valid Free Fire UID (minimum 8 digits, numeric only).');
                     return;
                 }
