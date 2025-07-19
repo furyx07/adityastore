@@ -4,6 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - Aditya Gaming Store</title>
+    <link rel="icon" href="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg" type="image/jpg">
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Shop for game top-ups (Free Fire, Mobile Legends) and subscriptions at Aditya Gaming Store. Instant delivery, secure payments via Khalti, eSewa, and Bank Transfer.">
+    <meta name="keywords" content="Nepal game topup, Free Fire diamonds, Mobile Legends diamonds, Aditya Gaming Store">
+    <meta name="author" content="Aditya Gaming Store">
+    <meta name="robots" content="index, follow">
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE_HERE">
+    <!-- Replace YOUR_GOOGLE_VERIFICATION_CODE_HERE with your actual Google Search Console verification code -->
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Shop Game Top-Ups & Subscriptions | Aditya Gaming Store">
+    <meta property="og:description" content="Buy Free Fire and Mobile Legends top-ups in Nepal with instant delivery and secure payments.">
+    <meta property="og:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg">
+    <meta property="og:url" content="https://adityarajbanshi.com.np/products.html">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shop Game Top-Ups & Subscriptions | Aditya Gaming Store">
+    <meta name="twitter:description" content="Instant top-ups for Free Fire and Mobile Legends in Nepal.">
+    <meta name="twitter:image" content="https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg">
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aditya Gaming Store",
+      "url": "https://adityarajbanshi.com.np",
+      "logo": "https://i.ibb.co/HvxDWHG/Picsart-25-07-17-21-38-11-887.jpg",
+      "sameAs": [
+        "https://facebook.com/adyyera",
+        "https://wa.me/9779829317406",
+        "mailto:adityagamingstoregg@gmail.com"
+      ]
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Oxanium:wght@700&display=stylesheet" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -218,7 +253,7 @@
             position: relative;
         }
 
-        .product-card:hover {
+        .product-card.active:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(255, 0, 102, 0.3);
         }
@@ -235,6 +270,24 @@
             font-family: 'Oxanium', sans-serif;
             font-size: clamp(14px, 2vw, 16px);
             color: var(--text-color);
+        }
+
+        .product-card.disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .out-of-stock {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #666;
+            color: #fff;
+            font-size: clamp(10px, 1.5vw, 12px);
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
         /* 📞 Contact CTA */
@@ -420,6 +473,11 @@
             .product-card h3 {
                 font-size: clamp(12px, 2vw, 14px);
             }
+
+            .out-of-stock {
+                font-size: clamp(9px, 1.5vw, 11px);
+                padding: 4px 8px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -438,6 +496,11 @@
 
             .product-card h3 {
                 font-size: clamp(10px, 2vw, 12px);
+            }
+
+            .out-of-stock {
+                font-size: clamp(8px, 1.5vw, 10px);
+                padding: 3px 6px;
             }
         }
 
@@ -458,13 +521,18 @@
             .product-card h3 {
                 font-size: clamp(9px, 1.8vw, 11px);
             }
+
+            .out-of-stock {
+                font-size: clamp(7px, 1.5vw, 9px);
+                padding: 3px 5px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- 🚀 Top Bar -->
     <div class="announcement-bar">
-        ⚡️ Instant Top-Ups | 24/7 Support | 🎮 Tournaments Open — Join & Win Now!
+        ⚡️ Instant Top-Ups for Free Fire & Mobile Legends | 24/7 Support | 🎮 Tournaments Open!
     </div>
 
     <!-- 🎯 Header -->
@@ -501,8 +569,8 @@
         </video>
         <div class="container">
             <div class="hero-content">
-                <h1>SHOP <span>DIAMONDS</span> & MORE!</h1>
-                <p>Instant Delivery • Secure Payments • Exclusive Offers</p>
+                <h1>SHOP <span>DIAMONDS</span> & <span>SUBSCRIPTIONS</span>!</h1>
+                <p>Instant Delivery for Free Fire & Mobile Legends • Secure Payments</p>
                 <div class="cta-buttons">
                     <a href="#products" class="btn btn-primary">Explore Products</a>
                 </div>
@@ -514,25 +582,54 @@
     <section class="products" id="products">
         <div class="container">
             <h2 class="section-title">OUR PRODUCTS</h2>
-            <p class="disclaimer">Choose your game top-up below or message us for custom orders!</p>
-            <p class="disclaimer">Some services are being updated. Please bear with us while we improve your experience.</p>
+            <p class="disclaimer">Free Fire and Mobile Legends top-ups are available! Other products are currently out of stock. Message us for updates!</p>
 
-            <!-- Battle Royale Category -->
-            <h3 class="category-title">Battle Royale</h3>
+            <!-- Subscriptions Category -->
+            <h3 class="category-title">Subscriptions</h3>
             <div class="products-grid">
-                <a href="products/freefire.html" class="product-card">
+                <div class="product-card disabled">
+                    <img src="https://i.ibb.co/4tG3W1K/youtube-premium.jpg" alt="YouTube Premium">
+                    <h3>YouTube Premium</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
+                <div class="product-card disabled">
+                    <img src="https://i.ibb.co/7p4G5Qz/google-play-gift-card.jpg" alt="Google Play Gift Card">
+                    <h3>Google Play Gift Card</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
+                <div class="product-card disabled">
+                    <img src="https://i.ibb.co/QX4mL3N/itunes-gift-card.jpg" alt="iTunes Gift Card">
+                    <h3>iTunes Gift Card</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
+            </div>
+
+            <!-- Games Category -->
+            <h3 class="category-title">Games</h3>
+            <div class="products-grid">
+                <a href="products/freefire.html" class="product-card active">
                     <img src="https://i.ibb.co/M5NCWvGy/freefire.jpg" alt="Free Fire">
                     <h3>Free Fire</h3>
                 </a>
-            </div>
-
-            <!-- MOBA Category -->
-            <h3 class="category-title">MOBA</h3>
-            <div class="products-grid">
-                <a href="products/mlbb.html" class="product-card">
+                <a href="products/mlbb.html" class="product-card active">
                     <img src="https://i.ibb.co/cKcJ1MK7/mlbb.jpg" alt="Mobile Legends">
                     <h3>Mobile Legends</h3>
                 </a>
+                <div class="product-card disabled">
+                    <img src="https://i.ibb.co/0Y4qZ3N/pubg-mobile.jpg" alt="PUBG Mobile">
+                    <h3>PUBG Mobile</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
+                <div class="product-card disabled">
+                    <img src="https://i.ibb.co/7z8X3qR/roblox.jpg" alt="Roblox">
+                    <h3>Roblox</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
+                <div class="product-card disabled">
+                    <img src="https://i.ibb.co/2q5Y3mT/cod-mobile.jpg" alt="Call of Duty Mobile">
+                    <h3>Call of Duty Mobile</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
             </div>
         </div>
     </section>
@@ -540,7 +637,7 @@
     <!-- 📞 Contact CTA -->
     <section class="contact-cta">
         <div class="container">
-            <h2>Select Your Top-Up or Drop a Message!</h2>
+            <h2>Need Help? Contact Us 24/7!</h2>
             <form action="https://formspree.io/f/mvgqpppq" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
@@ -558,7 +655,7 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>ADITYA GAMING STORE</h3>
-                    <p>Aditya Gaming Store is your trusted source for digital top-ups and subscriptions for a wide variety of games. Whether you play battle royale, strategy, MOBA, or casual games, we provide fast and secure top-up services to help you enjoy your favorite games without limits. With easy payment options like Esewa, Khalti, and bank transfer, topping up has never been easier.</p>
+                    <p>Aditya Gaming Store is your trusted source for Free Fire and Mobile Legends top-ups in Nepal. Fast, secure, and instant delivery with payments via Khalti, eSewa, and Bank Transfer.</p>
                     <div class="social-links">
                         <a href="https://facebook.com/adyyera"><i class="fab fa-facebook"></i></a>
                         <a href="https://wa.me/9779829317406"><i class="fab fa-whatsapp"></i></a>
@@ -584,7 +681,7 @@
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Aditya Gaming Store. All Rights Reserved.</p>
-                <p class="disclaimer">Disclaimer: Aditya Gaming Store is a sole proprietorship business dedicated to providing virtual game top-up services and tournament hosting. We are not affiliated with or endorsed by any game publishers or official platforms. All game-related assets, names, and trademarks belong to their respective owners.</p>
+                <p class="disclaimer">Disclaimer: Aditya Gaming Store is a sole proprietorship business dedicated to providing virtual game top-up services. We are not affiliated with or endorsed by any game publishers or service providers. All game-related assets, names, and trademarks belong to their respective owners.</p>
                 <div class="payment-methods">
                     <img src="https://i.ibb.co/0jmpX8cV/khaltilogo.png" alt="Khalti">
                     <img src="https://i.ibb.co/3585dZjZ/pngegg.png" alt="eSewa">
