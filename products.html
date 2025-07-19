@@ -238,7 +238,7 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(6, 1fr); /* 6 products per row on desktop */
             gap: 15px;
         }
 
@@ -462,7 +462,7 @@
             }
 
             .products-grid {
-                grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+                grid-template-columns: repeat(3, 1fr); /* 3 products per row on mobile */
                 gap: 10px;
             }
 
@@ -482,7 +482,7 @@
 
         @media (max-width: 480px) {
             .products-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 8px;
             }
 
@@ -506,7 +506,7 @@
 
         @media (max-width: 360px) {
             .products-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 6px;
             }
 
@@ -588,17 +588,17 @@
             <h3 class="category-title">Subscriptions</h3>
             <div class="products-grid">
                 <div class="product-card disabled">
-                    <img src="https://i.ibb.co/4tG3W1K/youtube-premium.jpg" alt="YouTube Premium">
+                    <img src="https://i.ibb.co/rK2h6qbY/Youtube-logo.png" alt="YouTube Premium">
                     <h3>YouTube Premium</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
                 <div class="product-card disabled">
-                    <img src="https://i.ibb.co/7p4G5Qz/google-play-gift-card.jpg" alt="Google Play Gift Card">
+                    <img src="https://i.ibb.co/39dPS9C9/google-play-gift-card-online-png-1.webp" alt="Google Play Gift Card">
                     <h3>Google Play Gift Card</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
                 <div class="product-card disabled">
-                    <img src="https://i.ibb.co/QX4mL3N/itunes-gift-card.jpg" alt="iTunes Gift Card">
+                    <img src="https://i.ibb.co/5XKnMZ5C/images-3.png" alt="iTunes Gift Card">
                     <h3>iTunes Gift Card</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
@@ -612,22 +612,17 @@
                     <h3>Free Fire</h3>
                 </a>
                 <a href="products/mlbb.html" class="product-card active">
-                    <img src="https://i.ibb.co/cKcJ1MK7/mlbb.jpg" alt="Mobile Legends">
+                    <img src="https://i.ibb.co/B22PLyxG/unnamed.png" alt="Mobile Legends">
                     <h3>Mobile Legends</h3>
                 </a>
                 <div class="product-card disabled">
-                    <img src="https://i.ibb.co/0Y4qZ3N/pubg-mobile.jpg" alt="PUBG Mobile">
+                    <img src="https://i.ibb.co/ynCGXhbB/399bb479272b8d34d957fb98d62ca30b.jpg" alt="PUBG Mobile">
                     <h3>PUBG Mobile</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
                 <div class="product-card disabled">
-                    <img src="https://i.ibb.co/7z8X3qR/roblox.jpg" alt="Roblox">
+                    <img src="https://i.ibb.co/FkD3Gmvy/Roblox-Logo-2022.jpg" alt="Roblox">
                     <h3>Roblox</h3>
-                    <span class="out-of-stock">Out of Stock</span>
-                </div>
-                <div class="product-card disabled">
-                    <img src="https://i.ibb.co/2q5Y3mT/cod-mobile.jpg" alt="Call of Duty Mobile">
-                    <h3>Call of Duty Mobile</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
             </div>
