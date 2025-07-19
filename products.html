@@ -202,7 +202,7 @@
 
         .btn-primary:hover {
             background: #e6005c;
-            transform: scale(1.02);
+            transform: scale(1.05);
         }
 
         /* 🛒 Products Section */
@@ -309,7 +309,7 @@
             max-width: 600px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column;
+            flex-direction: audition: none;
             gap: 12px;
         }
 
@@ -338,6 +338,17 @@
         .contact-form textarea {
             resize: vertical;
             min-height: 100px;
+        }
+
+        .contact-form .btn-primary {
+            padding: 14px 28px; /* Increased padding for larger button */
+            font-size: clamp(14px, 2.5vw, 16px); /* Larger font size */
+            border-radius: 8px; /* Slightly rounded corners */
+        }
+
+        .contact-form .btn-primary:hover {
+            background: #e6005c;
+            transform: scale(1.05); /* Slight scale effect on hover */
         }
 
         .button-container {
@@ -564,7 +575,7 @@
     <!-- 🎮 Hero Section -->
     <section class="hero">
         <video class="hero-video" autoplay loop muted playsinline>
-            <source src="assets/bg.mp4" type="video/mp4">
+            <source src="./assets/bg.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="container">
