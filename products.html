@@ -309,7 +309,7 @@
             max-width: 600px;
             margin: 0 auto;
             display: flex;
-            flex-direction: audition: none;
+            flex-direction: column; /* Fixed from 'audition' to 'column' */
             gap: 12px;
         }
 
@@ -575,13 +575,13 @@
     <!-- 🎮 Hero Section -->
     <section class="hero">
         <video class="hero-video" autoplay loop muted playsinline>
-            <source src="./assets/bg.mp4" type="video/mp4">
+            <source src="assets/bg.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="container">
             <div class="hero-content">
                 <h1>SHOP <span>DIAMONDS</span> & <span>SUBSCRIPTIONS</span>!</h1>
-                <p>Instant Delivery for Free Fire & Mobile Legends • Secure Payments</p>
+                <p>Instant Delivery • Secure Payments</p>
                 <div class="cta-buttons">
                     <a href="#products" class="btn btn-primary">Explore Products</a>
                 </div>
@@ -627,13 +627,18 @@
                     <h3>Mobile Legends</h3>
                 </a>
                 <div class="product-card disabled">
-                    <img src="https://i.ibb.co/ynCGXhbB/399bb479272b8d34d957fb98d62ca30b.jpg" alt="PUBG Mobile">
+                    <img src="https://i.ibb.co/F4jHhKMB/unnamed-1.png" alt="PUBG Mobile">
                     <h3>PUBG Mobile</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
                 <div class="product-card disabled">
                     <img src="https://i.ibb.co/FkD3Gmvy/Roblox-Logo-2022.jpg" alt="Roblox">
                     <h3>Roblox</h3>
+                    <span class="out-of-stock">Out of Stock</span>
+                </div>
+ <div class="product-card disabled">
+                    <img src="https://i.ibb.co/FkD3Gmvy/Roblox-Logo-2022.jpg" alt="CODM">
+                    <h3>Call Of Duty Mobile</h3>
                     <span class="out-of-stock">Out of Stock</span>
                 </div>
             </div>
